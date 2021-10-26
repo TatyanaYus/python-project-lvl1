@@ -4,5 +4,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: lint
-        run: make install
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+        # make depends on poetry
+      - name: Install dependencies
+        run: |
+          pip install poetry
+          make install
+      - name: Run linter and pytest
+        run: |
+          make lint
