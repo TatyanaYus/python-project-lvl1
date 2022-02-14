@@ -1,5 +1,6 @@
 """Run brain games."""
 from random import randint
+
 import prompt
 
 
