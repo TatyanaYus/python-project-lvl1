@@ -1,7 +1,7 @@
 """Run brain games."""
-from brain_games.cli import welcome_user
 from random import randint
 import prompt
+
 
 def main():
     """Welcome user."""
@@ -13,20 +13,22 @@ def main():
 
     counter = 0
     while counter < 3:
-    	number = randint(0, 10000)
-    	print('Question: ' + str(number))
-    	answer = prompt.string('Your answer: ')
+        number = randint(0, 10000)
+        print('Question: ' + str(number))
+        answer = prompt.string('Your answer: ')
 
-    	if number % 2 == 0 and answer == 'yes':
-    		print('Correct!')
-    		counter += 1
-    	elif number % 2 == 1 and answer == 'no':
-    		print('Correct!')
-    		counter += 1
-    	else:
-    		correct = 'yes' if number % 2 == 0 else 'no'
-    		print("'{}' is wrong answer ;(. Correct answer was '{}'. Let's try again, {}!".format(answer, correct, name))
-    		counter = 0
+        if number % 2 == 0 and answer == 'yes':
+            print('Correct!')
+            counter += 1
+        elif number % 2 == 1 and answer == 'no':
+            print('Correct!')
+            counter += 1
+        else:
+            correct = 'yes' if number % 2 == 0 else 'no'
+            print("'{}' is wrong answer ;(. \
+                Correct answer was '{}'.".format(answer, correct))
+            print("Let's try again, {}!".format(name))
+            counter = 0
     print('Congratulations, {}!'.format(name))
 
 
