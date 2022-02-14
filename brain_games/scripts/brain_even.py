@@ -3,6 +3,8 @@ from random import randint
 
 import prompt
 
+MAX_NUMBER = 10000
+
 
 def main():
     """Welcome user."""
@@ -14,8 +16,8 @@ def main():
 
     counter = 0
     while counter < 3:
-        number = randint(0, 10000)
-        print('Question: ' + str(number))
+        number = randint(0, MAX_NUMBER)
+        print('Question: {0}'.format(number))
         answer = prompt.string('Your answer: ')
 
         if number % 2 == 0 and answer == 'yes':
@@ -26,11 +28,14 @@ def main():
             counter += 1
         else:
             correct = 'yes' if number % 2 == 0 else 'no'
-            print("'{}' is wrong answer ;(. \
-                Correct answer was '{}'.".format(answer, correct))
-            print("Let's try again, {}!".format(name))
+
+            wrong_answer = "'{0}' is wrong answer ;(. ".format(answer)
+            try_again = "Correct answer was '{0}'.".format(correct)
+            print(wrong_answer + try_again)
+
+            print("Let's try again, {0}!".format(name))
             counter = 0
-    print('Congratulations, {}!'.format(name))
+    print('Congratulations, {0}!'.format(name))
 
 
 if __name__ == '__main__':
