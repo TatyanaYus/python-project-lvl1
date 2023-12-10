@@ -1,5 +1,4 @@
 from random import randint
-import math
 
 MAX_NUMBER = 20
 
@@ -19,10 +18,11 @@ def question():
 
 
 def func_gcd(a, b):
-	while a != 0 and b != 0:
-		if a > b:
-			a = a % b
-		else:
-			b = b % a
+    """Euclid's algorithm."""
+    while a != 0 and b != 0:
+        if a > b:
+            a = a % b
+        else:
+            b = b % a
 
-	return (a + b)
+    return (a + b)
