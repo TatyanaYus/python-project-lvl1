@@ -1,13 +1,15 @@
-"""Run brain games."""
-
+"""Run main."""
 import prompt
-from brain_games.games import even, calc
+from brain_games.games import calc, even
 
 
 def brain_even():
+    """brain_even."""
     main(even.welcome_message, even.question)
 
+
 def brain_calc():
+    """brain_calc."""
     main(calc.welcome_message, calc.question)
 
 
@@ -21,13 +23,13 @@ def main(welcome_message, question):
 
     counter = 0
     while counter < 3:
-        correct = question() 
+        correct = question()
 
         answer = prompt.string('Your answer: ')
 
         if correct == answer:
             print('Correct!')
-            counter += 1 
+            counter += 1
         else:
             wrong_answer = "'{0}' is wrong answer ;(. ".format(answer)
             try_again = "Correct answer was '{0}'.".format(correct)
