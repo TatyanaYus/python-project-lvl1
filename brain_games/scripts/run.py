@@ -1,34 +1,34 @@
 """Run brain games."""
-from random import randint
 
 import prompt
+from brain_games.games import even, calc
 
-MAX_NUMBER = 10000
+
+def brain_even():
+    main(even.welcome_message, even.question)
+
+def brain_calc():
+    main(calc.welcome_message, calc.question)
 
 
-def main():
+def main(welcome_message, question):
     """Welcome user."""
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print('Hello, {0}!'.format(name))
 
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    print(welcome_message())
 
     counter = 0
     while counter < 3:
-        number = randint(0, MAX_NUMBER)
-        print('Question: {0}'.format(number))
+        correct = question() 
+
         answer = prompt.string('Your answer: ')
 
-        if number % 2 == 0 and answer == 'yes':
+        if correct == answer:
             print('Correct!')
-            counter += 1
-        elif number % 2 == 1 and answer == 'no':
-            print('Correct!')
-            counter += 1
+            counter += 1 
         else:
-            correct = 'yes' if number % 2 == 0 else 'no'
-
             wrong_answer = "'{0}' is wrong answer ;(. ".format(answer)
             try_again = "Correct answer was '{0}'.".format(correct)
             print(wrong_answer + try_again)
