@@ -12,5 +12,8 @@
 ### brain-gcd Demo
 [Video](https://asciinema.org/a/RCgoEcYW5Ng6cfxWbD7I5e2yv)
 
-### brain-gcd Demo
+### brain-progression Demo
 [Video](https://asciinema.org/a/XfR2pgcG088oBYlo49aWz3Tvn)
+
+### brain-prime Demo
+[Video](https://asciinema.org/a/0XzgRtb3iGPZ62PliThoN1ZbP)

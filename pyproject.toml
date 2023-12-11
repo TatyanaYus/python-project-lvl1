@@ -24,4 +24,5 @@ brain-even = "brain_games.scripts.run:brain_even"
 brain-calc = "brain_games.scripts.run:brain_calc"
 brain-gcd = "brain_games.scripts.run:brain_gcd"
 brain-progression = "brain_games.scripts.run:brain_progression"
+brain-prime = "brain_games.scripts.run:brain_prime"
 
