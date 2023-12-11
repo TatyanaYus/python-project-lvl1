@@ -8,3 +8,9 @@
 
 ### brain-calc Demo
 [Video](https://asciinema.org/a/vth3pKKAljBGtZMBTWOTk0eCc)
+
+### brain-gcd Demo
+[Video](https://asciinema.org/a/RCgoEcYW5Ng6cfxWbD7I5e2yv)
+
+### brain-gcd Demo
+[Video](https://asciinema.org/a/XfR2pgcG088oBYlo49aWz3Tvn)

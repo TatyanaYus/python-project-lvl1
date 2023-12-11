@@ -1,6 +1,6 @@
 """Run main."""
 import prompt
-from brain_games.games import calc, even, gcd
+from brain_games.games import calc, even, gcd, progression
 
 
 def brain_even():
@@ -16,6 +16,11 @@ def brain_calc():
 def brain_gcd():
     """brain_gcd."""
     main(gcd.welcome_message, gcd.question)
+
+
+def brain_progression():
+    """brain_progression."""
+    main(progression.welcome_message, progression.question)
 
 
 def main(welcome_message, question):
