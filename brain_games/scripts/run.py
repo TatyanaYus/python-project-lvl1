@@ -52,7 +52,7 @@ def main(welcome_message, question):
 
             print("Let's try again, {0}!".format(name))
             counter = 0
-            return 
+            return
     print('Congratulations, {0}!'.format(name))
 
 
